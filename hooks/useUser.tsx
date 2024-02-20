@@ -9,7 +9,7 @@ import { createContext, useEffect, useState, useContext } from "react";
 type UserContextType = {
   accessToken: string | null;
   user: User | null;
-  userDetails: UserDetails;
+  userDetails: UserDetails | null;
   isLoading: boolean;
   subscription: Subscription | null;
 };

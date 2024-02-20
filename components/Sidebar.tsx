@@ -53,6 +53,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
                 active={item.active}
                 href={item.href}
                 Icon={item.icon}
+                key={item.label}
               />
             ))}
           </div>
