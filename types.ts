@@ -1,4 +1,3 @@
-import { Stringifier } from "postcss";
 import Stripe from "stripe";
 
 export interface Song {
@@ -31,7 +30,7 @@ export interface Product {
 
 export interface Price {
   id: string;
-  product?: string;
+  product_id?: string;
   active?: boolean;
   description?: string;
   unit_amount?: number;
@@ -41,7 +40,11 @@ export interface Price {
   interval_count?: number;
   trial_period_days?: number | null;
   metadata?: Stripe.Metadata;
-  products: Product;
+  products?: Product;
+}
+
+export interface ProductWithPrices extends Product {
+  prices?: Price[];
 }
 
 export interface Subscription {

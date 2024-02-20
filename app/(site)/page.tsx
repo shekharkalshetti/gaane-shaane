@@ -2,11 +2,15 @@ import getSongs from "@/actions/getSongs";
 import Header from "@/components/Header";
 import ListItem from "@/components/ListItem";
 import PageContent from "@/components/PageContent";
+import Error from "./error";
+import Loading from "./loading";
 
 export const revalidate = 0;
 
 export default async function Home() {
   const songs = await getSongs();
+
+  // throw new Loading("Test");
 
   return (
     <div className="bg-neutral-900 rounded-lg h-full w-full overflow-hidden overflow-y-auto">
