@@ -49,11 +49,11 @@ const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
           <div className="flex flex-col gap-y-4 px-5 py-4">
             {routes.map((item, index) => (
               <SidebarItem
+                key={item.href}
                 label={item.label}
                 active={item.active}
                 href={item.href}
                 Icon={item.icon}
-                key={`${item.label}-${index}`}
               />
             ))}
           </div>
