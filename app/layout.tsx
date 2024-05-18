@@ -13,7 +13,7 @@ import getActiveProductsWithPrices from "@/actions/getActiveProductsWithPrices";
 const font = Figtree({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Spotify Clone",
+  title: "Gaane Shaane",
   description: "Listen to music!",
 };
 
